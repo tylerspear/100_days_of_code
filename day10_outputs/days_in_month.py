@@ -14,5 +14,13 @@ def days_in_month(month):
   month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
   return month_days[month-1]
 
-user_choice = int(input("What month to know the days for? "))
-print(f"That month has {days_in_month(user_choice)} days in it.")
+user_choice_month = int(input("What month to know the days for? "))
+if user_choice_month == 2:
+    user_choice_year = int(input("What year? "))
+    if is_leap(user_choice_year):
+        print(f"That month has 29 days in it.")
+    else:
+        print(f"That month has 28 days in it.")
+
+else:
+    print(f"That month has {days_in_month(user_choice_month)} days in it.")
