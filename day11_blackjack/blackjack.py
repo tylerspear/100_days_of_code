@@ -40,6 +40,7 @@ def blackjack():
                 if player_total == 21:
                     print(f"Your Cards: {player}, Total: {player_total}")
                     print('Blackjack!')
+            
             elif hit == 'n':
                 while dealer_total <= 16:
                 #pc keeps drawing until over 16
@@ -63,7 +64,9 @@ def blackjack():
                     print("Dealer Wins!")
                     print(f"Dealer Cards: {dealer}, Total: {dealer_total}")
                     game_over = True
+    
     play_again = input("Play again?: (y/n): ")
+    
     if play_again == 'y':
         blackjack()
 
